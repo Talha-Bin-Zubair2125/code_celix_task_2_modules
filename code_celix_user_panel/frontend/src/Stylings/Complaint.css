@@ -1,0 +1,100 @@
+/* Form container */
+.complaint-form {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.complaint-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+/* Sections */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Row layout */
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.row.column {
+  flex-direction: column;
+}
+
+/* Inputs & selects */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Labels */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/* Submit button */
+.submit-btn {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Back button */
+.back-btn {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #d1d5db;
+}

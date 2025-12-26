@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Userprofile() {
@@ -50,9 +50,12 @@ function Userprofile() {
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-left">
-          <a href="/feedback" className="nav-link">
+          <Link to="/complaint" className="nav-link">
+            Submit Complaint
+          </Link>
+          <Link to="/feedback" className="nav-link">
             Submit Feedback
-          </a>
+          </Link>
         </div>
         <div className="nav-right">
           {user && (

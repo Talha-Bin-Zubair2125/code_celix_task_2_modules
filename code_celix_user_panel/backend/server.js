@@ -8,22 +8,21 @@ app.use(express.json());
 // Runs the configuration function reads the .env file parses all key-value pairs and adds them in process.env.
 dotenv.config();
 
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then(() => console.log("MongoDB Connection is Eastablished!"))
-  .catch((error) => console.error(error, "Error Connecting With DB"));
+// Importing db.js connection file
+const connectDB = require("./db");
+connectDB();
 
 // Importing Route
 const auth = require("./routes/auth");
-app.use('/auth',auth);
+app.use("/auth", auth);
+const complaint_route = require("./routes/Complaint_Route");
+app.use("/complaint", complaint_route);
 
-  // Default Route
-app.get('/',(req, res) => {
+// Default Route
+app.get("/", (req, res) => {
   res.send("Hey! Welcome to User Panel");
 });
 
-
-
 app.listen(process.env.port, () => {
-    console.log(`Server is Running on Port ${process.env.port}`); 
+  console.log(`Server is Running on Port ${process.env.port}`);
 });

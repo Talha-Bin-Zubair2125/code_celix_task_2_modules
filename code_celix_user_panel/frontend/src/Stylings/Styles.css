@@ -148,61 +148,92 @@ a:hover {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar */
+/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  padding: 14px 24px;
+  background-color: #f8fafc; /* light background */
+  border-bottom: 1px solid #e5e7eb;
 }
 
+/* Left nav links */
+.nav-left {
+  display: flex;
+  gap: 16px;
+}
+
+/* Nav links */
 .nav-link {
+  color: #1f2937;
   text-decoration: none;
-  color: #007bff;
+  font-size: 15px;
   font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: #e5e7eb;
+  transition: all 0.25s ease;
 }
 
 .nav-link:hover {
-  text-decoration: underline;
+  background-color: #d1d5db;
 }
 
-/* Dropdown */
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown wrapper (IMPORTANT FIX) */
 .dropdown {
-  position: relative;
-  cursor: pointer;
-  user-select: none;
+  position: relative; /* makes dropdown-menu align under username */
 }
 
+/* Dropdown toggle */
 .dropdown-toggle {
-  color: #333;
+  color: #1f2937;
+  cursor: pointer;
   font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: #e5e7eb;
+  transition: background 0.25s ease;
 }
 
+.dropdown-toggle:hover {
+  background-color: #d1d5db;
+}
+
+/* Dropdown menu */
 .dropdown-menu {
   position: absolute;
-  right: 0;
-  top: 25px;
+  top: 100%; /* directly below toggle */
+  left: 0;   /* aligned with username */
+  margin-top: 6px;
   background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  min-width: 140px;
+  z-index: 1000;
 }
 
+/* Dropdown button */
 .dropdown-menu button {
-  background: none;
+  width: 100%;
+  padding: 10px 14px;
   border: none;
-  cursor: pointer;
+  background: none;
+  color: #1f2937;
   font-size: 14px;
-  color: #dc3545;
-  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
 }
 
 .dropdown-menu button:hover {
-  text-decoration: underline;
+  background-color: #f3f4f6;
 }
-
 h2 {
   margin-bottom: 20px;
   color: #333;

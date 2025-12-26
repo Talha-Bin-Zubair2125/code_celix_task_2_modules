@@ -1,6 +1,7 @@
 import Login from "./components/login";
 import Register from "./components/register";
 import Userprofile from "./components/userprofile";
+import Complaint from "./components/complaint";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./Stylings/Styles.css";
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/userprofile" element={<Userprofile />} />
+          <Route path="/complaint" element={<Complaint />} />
         </Routes>
       </BrowserRouter>
     </>
