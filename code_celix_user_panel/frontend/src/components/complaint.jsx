@@ -69,7 +69,6 @@ function Complaint() {
               required
               onChange={(e) => setname(e.target.value)}
             />
-
             {/* For Email */}
             <input
               type="email"

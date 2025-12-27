@@ -17,6 +17,8 @@ const auth = require("./routes/auth");
 app.use("/auth", auth);
 const complaint_route = require("./routes/Complaint_Route");
 app.use("/complaint", complaint_route);
+const feeback_route = require("./routes/feedback_route");
+app.use("/feedback",feeback_route);
 
 // Default Route
 app.get("/", (req, res) => {
