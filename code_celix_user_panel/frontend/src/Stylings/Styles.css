@@ -1,287 +1,249 @@
-/* ===== Reset ===== */
+/* ================= General Reset & Font ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 body {
-  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
 }
 
-/* ===== Layout Wrapper ===== */
+/* ================= Auth Pages Wrapper ================= */
 .auth-wrapper {
   display: flex;
   min-height: 100vh;
-  background: linear-gradient(135deg, #5b5ce2, #6f70ff);
+  width: 100%;
 }
 
-/* ===== Left Section ===== */
+/* Left Side Info */
 .auth-left {
   flex: 1;
-  padding: 60px;
+  background-color: #1e3a8a;
+  color: #fff;
+  padding: 50px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #ffffff;
+  gap: 20px;
 }
 
 .auth-left h1 {
-  font-size: 38px;
-  margin-bottom: 15px;
-  line-height: 1.2;
+  font-size: 2.5rem;
 }
 
 .auth-left p {
-  font-size: 16px;
-  max-width: 420px;
-  color: #e0e7ff;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-/* ===== Right Section ===== */
+/* Right Side Form */
 .auth-right {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 30px;
 }
 
-/* ===== Card ===== */
-.container {
-  background: #ffffff;
+.auth-right .container {
   width: 100%;
-  max-width: 380px;
-  padding: 35px;
-  border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-
-/* ===== Headings ===== */
-.container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 22px;
-  color: #1f2933;
-}
-
-/* ===== Form ===== */
-form {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-/* ===== Inputs ===== */
-input {
-  padding: 13px 15px;
-  border-radius: 10px;
+.auth-right h2 {
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.auth-right input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
   border: 1px solid #d1d5db;
-  background: #f1f5ff;
-  font-size: 14px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
-input:focus {
+.auth-right input:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 5px rgba(30,58,138,0.3);
   outline: none;
-  border-color: #5b5ce2;
-  background: #ffffff;
-  box-shadow: 0 0 0 2px rgba(91, 92, 226, 0.2);
 }
 
-/* ===== Button ===== */
-button {
-  background: #5b5ce2;
-  color: #ffffff;
-  padding: 13px;
-  border-radius: 10px;
+/* Buttons */
+.auth-right button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #1e3a8a;
+  color: #fff;
   border: none;
-  font-size: 15px;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s, transform 0.2s;
 }
 
-button:hover {
-  background: #4748d6;
-  transform: translateY(-1px);
+.auth-right button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
 }
 
-button:disabled {
-  background: #a5b4fc;
-  cursor: not-allowed;
-}
-
-/* ===== Links ===== */
-a {
-  text-align: center;
-  font-size: 14px;
-  color: #5b5ce2;
+/* Links */
+.auth-right a {
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Messages ===== */
-.success {
-  margin-top: 15px;
+  color: #1e3a8a;
+  font-weight: 500;
+  display: block;
   text-align: center;
-  color: #16a34a;
-  font-weight: 600;
+  margin-top: 10px;
+  transition: color 0.3s;
 }
 
-.error {
-  margin-top: 15px;
+.auth-right a:hover {
+  color: #2563eb;
+}
+
+/* Messages */
+.success, .success-msg {
+  color: green;
+  font-weight: 600;
   text-align: center;
-  color: #dc2626;
-  font-weight: 600;
 }
 
+.error, .error-msg {
+  color: red;
+  font-weight: 600;
+  text-align: center;
+}
+
+.loading-text {
+  color: #1e3a8a;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ================= Userprofile Page ================= */
 .profile-container {
-  max-width: 600px;
+  max-width: 900px;
   margin: 20px auto;
-  padding: 30px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Navbar container */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 24px;
-  background-color: #f8fafc; /* light background */
-  border-bottom: 1px solid #e5e7eb;
+  background-color: #1e3a8a;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
-/* Left nav links */
 .nav-left {
   display: flex;
-  gap: 16px;
+  gap: 15px;
 }
 
-/* Nav links */
 .nav-link {
-  color: #1f2937;
+  color: #fff;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 6px;
-  background-color: #e5e7eb;
-  transition: all 0.25s ease;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
-  background-color: #d1d5db;
+  color: #93c5fd;
 }
 
-/* Right section */
 .nav-right {
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
-/* Dropdown wrapper (IMPORTANT FIX) */
-.dropdown {
-  position: relative; /* makes dropdown-menu align under username */
-}
-
-/* Dropdown toggle */
+/* Dropdown */
 .dropdown-toggle {
-  color: #1f2937;
+  color: #fff;
   cursor: pointer;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 6px;
-  background-color: #e5e7eb;
-  transition: background 0.25s ease;
+  font-weight: 600;
 }
 
-.dropdown-toggle:hover {
-  background-color: #d1d5db;
-}
-
-/* Dropdown menu */
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* directly below toggle */
-  left: 0;   /* aligned with username */
-  margin-top: 6px;
-  background-color: #ffffff;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 0;
   border-radius: 6px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  min-width: 140px;
-  z-index: 1000;
+  margin-top: 5px;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Dropdown button */
 .dropdown-menu button {
   width: 100%;
-  padding: 10px 14px;
+  padding: 8px 12px;
   border: none;
   background: none;
-  color: #1f2937;
-  font-size: 14px;
-  text-align: left;
   cursor: pointer;
+  text-align: left;
+  transition: background 0.3s;
 }
 
 .dropdown-menu button:hover {
   background-color: #f3f4f6;
 }
-h2 {
-  margin-bottom: 20px;
-  color: #333;
-}
 
+/* User Profile Card */
 .profile-card {
-  background-color: #ffffff;
   padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: left;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 .profile-card p {
   margin: 10px 0;
-  font-size: 16px;
-  color: #555;
+  font-size: 1.1rem;
 }
 
-.success-msg {
-  color: #28a745;
-  font-weight: 500;
-}
-
-.error-msg {
-  color: #dc3545;
-  font-weight: 500;
-}
-
-.loading-text {
-  font-style: italic;
-  color: #777;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
+/* ================= Responsive ================= */
+@media (max-width: 1024px) {
   .auth-wrapper {
     flex-direction: column;
   }
 
-  .auth-left {
-    padding: 40px;
+  .auth-left, .auth-right {
+    flex: none;
+    width: 100%;
+    padding: 30px 20px;
     text-align: center;
-    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-left {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .auth-right {
-    padding-bottom: 40px;
+  .profile-card p {
+    font-size: 1rem;
   }
 }

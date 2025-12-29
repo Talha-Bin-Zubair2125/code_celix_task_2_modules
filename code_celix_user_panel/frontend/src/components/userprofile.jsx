@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Userprofile() {
@@ -56,6 +56,9 @@ function Userprofile() {
           <Link to="/feedback" className="nav-link">
             Submit Feedback
           </Link>
+          <Link to="/viewhistory" className="nav-link">
+            View History
+          </Link>
         </div>
         <div className="nav-right">
           {user && (
@@ -86,6 +89,9 @@ function Userprofile() {
         <div className="profile-card">
           <p>
             <strong>Username:</strong> {user.fullname}
+          </p>
+          <p>
+            <strong>Email:</strong> {user.email}
           </p>
         </div>
       ) : (
